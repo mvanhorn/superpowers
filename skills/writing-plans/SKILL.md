@@ -97,9 +97,11 @@ Expected: PASS
 
 - [ ] **Step 5: Commit**
 
+Match the repository's existing commit-message convention; inspect recent `git log --oneline -5` output before choosing the message.
+
 ```bash
 git add tests/path/test.py src/path/file.py
-git commit -m "feat: add specific feature"
+git commit -m "add specific feature"
 ```
 ````
 
