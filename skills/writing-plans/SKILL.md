@@ -139,13 +139,18 @@ Every step must contain the actual content an engineer needs. These are **plan f
 
 After writing the complete plan, look at the spec with fresh eyes and check the plan against it. This is a checklist you run yourself — not a subagent dispatch.
 
-**1. Spec coverage:** Skim each section/requirement in the spec. Can you point to a task that implements it? List any gaps.
+**1. Bidirectional alignment (mandatory):** Make two passes between the spec and plan:
+
+- **Forward coverage:** For every specification requirement and global constraint, point to the task(s) that implement it or the `Global Constraints` entry that governs it. List and fix any gaps.
+- **Reverse scope:** For every task and step in the plan, point to the specification requirement or global constraint that justifies it. Remove or revise anything unjustified by the specification.
+
+If a mismatch cannot be resolved without changing product intent, stop and ask your human partner for guidance. Do not silently invent, remove, or reinterpret requirements.
 
 **2. Placeholder scan:** Search your plan for red flags — any of the patterns from the "No Placeholders" section above. Fix them.
 
 **3. Type consistency:** Do the types, method signatures, and property names you used in later tasks match what you defined in earlier tasks? A function called `clearLayers()` in Task 3 but `clearFullLayers()` in Task 7 is a bug.
 
-If you find issues, fix them inline. No need to re-review — just fix and move on. If you find a spec requirement with no task, add the task.
+If you find issues, fix them inline, then repeat the bidirectional alignment check. Do not offer execution until every mismatch is resolved or clarified with your human partner.
 
 ## Execution Handoff
 
