@@ -26,8 +26,8 @@ Subagent (general-purpose):
     **Head:** [HEAD_SHA]
 
     ```bash
-    git diff --stat [BASE_SHA]..[HEAD_SHA]
-    git diff [BASE_SHA]..[HEAD_SHA]
+    git --no-pager diff --stat [BASE_SHA]..[HEAD_SHA]
+    git --no-pager diff [BASE_SHA]..[HEAD_SHA]
     ```
 
     ## Read-Only Review

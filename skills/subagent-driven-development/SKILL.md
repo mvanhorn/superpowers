@@ -263,8 +263,8 @@ needed.
 
 - Hand the reviewer its diff as a file: run this skill's
   `scripts/review-package PLAN_FILE BASE HEAD` and pass the reviewer the file path
-  it prints (or, without bash: `git log --oneline`, `git diff --stat`,
-  and `git diff -U10` for the range, redirected to one uniquely named
+  it prints (or, without bash: `git log --oneline`, `git --no-pager diff --stat`,
+  and `git --no-pager diff -U10` for the range, redirected to one uniquely named
   file). The output never enters your own context, and the reviewer sees
   the commit list, stat summary, and full diff with context in one Read
   call. Use the BASE you recorded before dispatching the implementer —

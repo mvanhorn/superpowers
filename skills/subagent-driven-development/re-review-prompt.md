@@ -37,8 +37,8 @@ Subagent (general-purpose):
     Read the diff file once — it contains the fix commits, a stat summary,
     and the fix diff with surrounding context. Do not re-run git commands.
     If the diff file is missing, fetch the diff yourself:
-    `git diff --stat [FIX_BASE_SHA]..[HEAD_SHA]` and
-    `git diff [FIX_BASE_SHA]..[HEAD_SHA]`.
+    `git --no-pager diff --stat [FIX_BASE_SHA]..[HEAD_SHA]` and
+    `git --no-pager diff [FIX_BASE_SHA]..[HEAD_SHA]`.
 
     Your review is read-only on this checkout. Do not mutate the working
     tree, the index, HEAD, or branch state in any way.
